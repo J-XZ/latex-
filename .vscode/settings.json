@@ -1,0 +1,201 @@
+{
+  "editor.inlineSuggest.enabled": true,
+  "files.autoSave": "afterDelay",
+  "github.copilot.enable": {
+      "*": true,
+      "plaintext": true,
+      "markdown": true,
+      "scminput": false,
+      "jsonc": true
+  },
+  "[c]": {
+      "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+  },
+  "bookmarks.keepBookmarksOnLineDelete": true,
+  "bookmarks.saveBookmarksInProject": true,
+  "bookmarks.sideBar.expanded": true,
+  "bookmarks.useWorkaroundForFormatters": true,
+  "editor.accessibilitySupport": "off",
+  "settingsSync.ignoredSettings": [],
+  "editor.fontSize": 15,
+  "clang-format.fallbackStyle": "Google",
+  "google-translate.firstLanguage": "zh-cn",
+  "google-translate.secondLanguage": "en",
+  "google-translate.maxSizeOfResult": 1000,
+  "google-translate.noticeOnlyError": true,
+  "google-translate.switchFunctionTranslation": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "editor.fontVariations": false,
+  "editor.fontFamily": "Input Mono",
+  "bookmarks.label.suggestion": "useWhenSelected",
+  "cmake.configureOnOpen": true,
+  "[cpp]": {
+      "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+  },
+  "labeledBookmarks.colors": [
+      [
+          "teal",
+          "#00dddd"
+      ],
+      [
+          "blue",
+          "#0000dd"
+      ],
+      [
+          "magenta",
+          "#dd00dd"
+      ],
+      [
+          "red",
+          "#dd0000"
+      ],
+      [
+          "yellow",
+          "#dddd00"
+      ],
+      [
+          "green",
+          "#00dd00"
+      ]
+  ],
+  "labeledBookmarks.unicodeMarkers": [
+      [
+          "look",
+          "👀"
+      ],
+      [
+          "bug",
+          "🐞"
+      ],
+      [
+          "asterix",
+          "✱"
+      ],
+      [
+          "diamond",
+          "◈"
+      ]
+  ],
+  "makefile.launchConfigurations": [],
+  "editor.tabSize": 2,
+  "VSCodeCounter.languages": {
+      "c": {
+          "extensions": [
+              ".c",
+              ".h"
+          ]
+      },
+      "shell": {
+          "extensions": [
+              ".sh",
+              ".bash",
+              ".zsh",
+              ".fish"
+          ]
+      },
+      "python": {
+          "extensions": [
+              ".py"
+          ]
+      },
+      "cpp": {
+          "extensions": [
+              ".cpp",
+              ".cc",
+              ".cxx",
+              ".c++",
+              ".hpp"
+          ]
+      },
+      "markdown": {
+          "extensions": [
+              ".md"
+          ]
+      },
+      "javascript": {
+          "extensions": [
+              ".js"
+          ]
+      },
+  },
+  "[python]": {
+      "editor.defaultFormatter": "ms-python.python"
+  },
+  "files.associations": {
+      "*.py": "python"
+  },
+  "[shellscript]": {
+      "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "debug.onTaskErrors": "showErrors",
+  "git.openRepositoryInParentFolders": "never",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.defaultProfile.linux": "fish",
+  "extensions.autoUpdate": false,
+  "workbench.colorTheme": "Darcula",
+  "terminal.integrated.enableBell": true,
+  "workbench.colorCustomizations": {
+      "editor.lineHighlightBackground": "#1073cf2d",
+      "editor.lineHighlightBorder": "#9fced11f",
+      "editorInlayHint.foreground": "#808080",
+      "editorInlayHint.parameterForeground": "#808080",
+      "editorInlayHint.typeForeground": "#808080",
+      "editorInlayHint.background": "#434343",
+      "editorUnnecessaryCode.opacity": "#00000054"
+  },
+  "editor.wordWrap": "off",
+  "editor.guides.highlightActiveIndentation": "always",
+  "clangd.onConfigChanged": "restart",
+  "workbench.iconTheme": "vscode-jetbrains-icon-theme",
+  "editor.fontLigatures": true,
+  "cppref.invertColorInDarkTheme": true,
+  "cppref.lang": "zh",
+  "terminal.integrated.automationProfile.osx": {
+  
+  },
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "fish.path.fish": "/opt/homebrew/bin/fish",
+  "fish.path.fish_indent": "/opt/homebrew/bin/fish_indent",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "[latex]": {
+      "editor.defaultFormatter": "James-Yu.latex-workshop"
+  },
+  "C_Cpp.autocomplete": "disabled",
+  "C_Cpp.configurationWarnings": "disabled",
+  "C_Cpp.enhancedColorization": "disabled",
+  "C_Cpp.hover": "disabled",
+  "C_Cpp.codeFolding": "disabled",
+  "C_Cpp.default.browse.limitSymbolsToIncludedHeaders": false,
+  "C_Cpp.dimInactiveRegions": false,
+  "C_Cpp.inlayHints.parameterNames.hideLeadingUnderscores": false,
+  "C_Cpp.inlayHints.parameterNames.suppressWhenArgumentContainsName": false,
+  "C_Cpp.intelliSenseEngine": "disabled",
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "[swift]": {
+      "editor.defaultFormatter": "vknabel.vscode-apple-swift-format"
+  },
+  "lldb.launch.expressions": "native",
+  "security.workspace.trust.untrustedFiles": "open",
+  "vscode-json-editor.theme": "dark",
+  "clangd.checkUpdates": true,
+  "formatFiles.logLevel": "info",
+  "redhat.telemetry.enabled": true,
+  "[yaml]": {
+      "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "formatFiles.extensionsToInclude": "cc,h,cpp",
+  "[bibtex]": {
+      "editor.defaultFormatter": "James-Yu.latex-workshop"
+  },
+  "latex-workshop.latex.recipes": [
+      {
+          "name": "latexmk (xelatex)",
+          "tools": [
+              "xelatexmk"
+          ]
+      },
+  ],
+}

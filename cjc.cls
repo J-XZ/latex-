@@ -88,22 +88,22 @@
 
 \class@define@key{
   language = {
-    choices = {
-      chinese,
-      english,
+      choices = {
+          chinese,
+          english,
+        },
+      default = chinese,
     },
-    default = chinese,
-  },
   fontset = {
-    choices = {
-      windows,
-      mac,
-      ubuntu,
-      fandol,
-      none,
+      choices = {
+          windows,
+          mac,
+          ubuntu,
+          fandol,
+          none,
+        },
+      default = none,
     },
-    default = none,
-  },
 }
 
 % 使用 \pkg{kvoptions} 提供的 key-value 接口，
@@ -155,40 +155,40 @@
 
 \class@define@key{
   font = {
-    choices = {
-      times,
-      termes,
-      xits,
-      libertinus,
-      lm,
-      auto,
-      none,
+      choices = {
+          times,
+          termes,
+          xits,
+          libertinus,
+          lm,
+          auto,
+          none,
+        },
+      default = auto,
     },
-    default = auto,
-  },
   cjk-font = {
-    name = cjk@font,
-    choices = {
-      windows,
-      mac,
-      noto,
-      fandol,
-      auto,
-      none,
+      name = cjk@font,
+      choices = {
+          windows,
+          mac,
+          noto,
+          fandol,
+          auto,
+          none,
+        },
+      default = auto,
     },
-    default = auto,
-  },
   math-font = {
-    name = math@font,
-    choices = {
-      xits,
-      stix,
-      libertinus,
-      lm,
-      none,
+      name = math@font,
+      choices = {
+          xits,
+          stix,
+          libertinus,
+          lm,
+          none,
+        },
+      default = xits,
     },
-    default = xits,
-  },
 }
 
 % 处理 \opt{fontset}
@@ -223,14 +223,14 @@
 % 检测系统
 \class@define@key{
   system = {
-    choices = {
-      auto,
-      mac,
-      unix,
-      windows,
+      choices = {
+          auto,
+          mac,
+          unix,
+          windows,
+        },
+      default = auto,
     },
-    default = auto,
-  },
 }
 \ifclass@system@auto
   \IfFileExists{/System/Library/Fonts/Menlo.ttc}{
@@ -448,7 +448,7 @@
   \setCJKmonofont{STFangsong}
   \setCJKfamilyfont{zhsong}{Songti SC}[
     UprightFont = * Light,
-      BoldFont  = * Bold,
+    BoldFont  = * Bold,
   ]%
   \setCJKfamilyfont{zhhei}{Heiti SC}[
     UprightFont = * Light,
@@ -704,17 +704,15 @@
   \fancyhf{}%
   \fancyhead[L]{%
     \class@hf@font
-    第 \class@volume{} 卷\quad 第 \class@number{} 期 \\
     \class@date@zh@short{\class@publish@date}%
   }%
   \fancyhead[C]{%
     \class@hf@font
-    计算机学报\\
-    CHINESE JOURNAL OF COMPUTERS%
+    \\
+    %
   }%
   \fancyhead[R]{%
     \class@hf@font
-    Vol. \class@volume\quad No. \class@number\\
     \class@date@en@short{\class@publish@date}%
   }%
 }
@@ -762,85 +760,85 @@
 
 \class@define@key{
   title = {
-    default = {标题},
-  },
+      default = {标题},
+    },
   title* = {
-    default = {Title},
-    name    = title@alt,
-  },
+      default = {Title},
+      name    = title@alt,
+    },
   short-title = {
-    name = short@title,
-  },
+      name = short@title,
+    },
   authors = {},
   affiliations = {},
   abstract = {
-    default = {摘要内容},
-  },
+      default = {摘要内容},
+    },
   abstract* = {
-    default = {Abstract content},
-    name    = abstract@alt,
-  },
+      default = {Abstract content},
+      name    = abstract@alt,
+    },
   keywords = {},
   keywords* = {
-    name    = keywords@alt,
-  },
+      name    = keywords@alt,
+    },
   clc = {
-    default = {TP391},
-  },
+      default = {TP391},
+    },
   doi = {
-    default = {10.11897/SP.J.1016.01.\the\year.\class@five@digits\thepage},
-  },
+      default = {10.11897/SP.J.1016.01.\the\year.\class@five@digits\thepage},
+    },
   received-date = {
-    name = received@date,
-    default = {\the\year-\two@digits{\month}-\two@digits{\day}},
-  },
+      name = received@date,
+      default = {\the\year-\two@digits{\month}-\two@digits{\day}},
+    },
   revised-date = {
-    name = revised@date,
-    default = {\the\year-\two@digits{\month}-\two@digits{\day}},
-  },
+      name = revised@date,
+      default = {\the\year-\two@digits{\month}-\two@digits{\day}},
+    },
   grants  = {},
   grants* = {
-    name = grants@alt,
-  },
+      name = grants@alt,
+    },
   publish-date = {
-    name = publish@date,
-    default = {\the\year-\two@digits{\month}-\two@digits{\day}},
-  },
+      name = publish@date,
+      default = {\the\year-\two@digits{\month}-\two@digits{\day}},
+    },
   volume = {
-    default = {43},
-  },
+      default = {43},
+    },
   number = {
-    default = {1},
-  },
+      default = {1},
+    },
   page = {
-    default = {1},
-  },
+      default = {1},
+    },
 }
 
 % 主标题
 \renewcommand\maketitle{\par%
   \begingroup
-    % \renewcommand\thefootnote{\@fnsymbol\c@footnote}%
-    % \def\@makefnmark{\rlap{\@textsuperscript{\normalfont\@thefnmark}}}%
-    \let\@makefnmark\relax
-    % \long\def\@makefntext##1{\parindent 1em\noindent
-    %         \hb@xt@1.8em{%
-    %             \hss\@textsuperscript{\normalfont\@thefnmark}}##1}%
-    \long\def\@makefntext##1{##1}%
-    \if@twocolumn
-      \ifnum \col@number=\@ne
-        \@maketitle
-      \else
-        \twocolumn[\@maketitle]%
-      \fi
-    \else
-      \newpage
-      \global\@topnum\z@   % Prevents figures from going at top of page.
+  % \renewcommand\thefootnote{\@fnsymbol\c@footnote}%
+  % \def\@makefnmark{\rlap{\@textsuperscript{\normalfont\@thefnmark}}}%
+  \let\@makefnmark\relax
+  % \long\def\@makefntext##1{\parindent 1em\noindent
+  %         \hb@xt@1.8em{%
+  %             \hss\@textsuperscript{\normalfont\@thefnmark}}##1}%
+  \long\def\@makefntext##1{##1}%
+  \if@twocolumn
+    \ifnum \col@number=\@ne
       \@maketitle
+    \else
+      \twocolumn[\@maketitle]%
     \fi
-    % \thispagestyle{plain}\@thanks
-    \thispagestyle{title}%
-    \class@title@footnote@main
+  \else
+    \newpage
+    \global\@topnum\z@   % Prevents figures from going at top of page.
+    \@maketitle
+  \fi
+  % \thispagestyle{plain}\@thanks
+  \thispagestyle{title}%
+  \class@title@footnote@main
   \endgroup
   \setcounter{footnote}{0}%
   \global\let\thanks\relax
@@ -869,30 +867,29 @@
   \classsetup{language = chinese}%
   \vspace*{20bp}%
   \begingroup
-    \centering
-    \begingroup
-      \heiti\zihao{2}\class@title\par
-    \endgroup
-    \vskip 10.5bp%
-    \begingroup
-      \fangsong\zihao{3}\class@format@authors{main}\par
-    \endgroup
-    \vskip 5.7bp%
-    \begingroup
-      \zihao{6}\class@format@affiliations{main}\par
-    \endgroup
+  \centering
+  \begingroup
+  \heiti\zihao{2}\class@title\par
+  \endgroup
+  \vskip 10.5bp%
+  \begingroup
+  \fangsong\zihao{3}\class@format@authors{main}\par
+  \endgroup
+  \vskip 5.7bp%
+  \begingroup
+  \zihao{6}\class@format@affiliations{main}\par
+  \endgroup
   \endgroup
   \vspace*{7.8bp}%
   \begingroup
-    \zihao{-5}%
-    {\heiti 摘\quad 要}\quad\class@abstract\par
-    \begingroup
-      \hangindent=4em%
-      关键词\quad
-      \class@clist@use{\class@keywords}{；}\par
-    \endgroup
-    {\heiti 中图法分类号}\quad\class@clc\hspace{3em}%
-    {\heiti DOI 号}\quad\doi{\class@doi}\par
+  \zihao{-5}%
+  {\heiti 摘\quad 要}\quad\class@abstract\par
+  \begingroup
+  \hangindent=4em%
+  关键词\quad
+  \class@clist@use{\class@keywords}{；}\par
+  \endgroup
+  \par
   \endgroup
 }
 
@@ -919,29 +916,29 @@
   \classsetup{language = english}%
   \vspace*{12bp}%
   \begingroup
-    \centering
-    \begingroup
-      \bfseries\zihao{4}\class@title@alt\par
-    \endgroup
-    \vskip 11bp%
-    \begingroup
-      \zihao{5}\class@format@authors{alt}\par
-    \endgroup
-    \vskip 9bp%
-    \begingroup
-      \zihao{6}\class@format@affiliations{alt}\par
-    \endgroup
+  \centering
+  % \begingroup
+  % \bfseries\zihao{4}\class@title@alt\par
+  % \endgroup
+  % \vskip 11bp%
+  % \begingroup
+  % \zihao{5}\class@format@authors{alt}\par
+  % \endgroup
+  % \vskip 9bp%
+  % \begingroup
+  % \zihao{6}\class@format@affiliations{alt}\par
+  % \endgroup
   \endgroup
   \vspace{5bp}%
-  \begingroup
-    \zihao{-5}%
-    \textbf{Abstract}\quad\class@abstract@alt\par
-    \begingroup
-      \hangindent=6.32em%
-      \textbf{Key words}\quad
-      \class@clist@use{\class@keywords@alt}{; }\par
-    \endgroup
-  \endgroup
+  % \begingroup
+  % \zihao{-5}%
+  % \textbf{Abstract}\quad\class@abstract@alt\par
+  % \begingroup
+  % \hangindent=6.32em%
+  % \textbf{Key words}\quad
+  % \class@clist@use{\class@keywords@alt}{; }\par
+  % \endgroup
+  % \endgroup
 }
 
 % 处理中文姓名格式
@@ -951,8 +948,8 @@
   \ifdim\wd\class@@box<2.1em\relax
     \ifdim\wd\class@@box>1.5em\relax
       \begingroup
-        \def\CJKglue{\hskip 0pt plus 2filll}%
-        \makebox[3em][l]{#1}%
+      \def\CJKglue{\hskip 0pt plus 2filll}%
+      \makebox[3em][l]{#1}%
       \endgroup
     \else
       #1%
@@ -966,16 +963,16 @@
 
 \newcommand\class@clist@use[2]{%
   \begingroup
-    \def\class@@tmp{}%
-    \def\class@clist@processor##1{%
-      \ifx\class@@tmp\@empty
-        \def\class@@tmp{#2}%
-      \else
-        #2%
-      \fi
-      ##1%
-    }%
-    \expandafter\comma@parse\expandafter{#1}{\class@clist@processor}%
+  \def\class@@tmp{}%
+  \def\class@clist@processor##1{%
+    \ifx\class@@tmp\@empty
+      \def\class@@tmp{#2}%
+    \else
+      #2%
+    \fi
+    ##1%
+  }%
+  \expandafter\comma@parse\expandafter{#1}{\class@clist@processor}%
   \endgroup
 }
 
@@ -1050,7 +1047,7 @@
     (\@nameuse{class@@affil@#1})\par%
   }%
   \begingroup
-    \kvsetkeys@expandafter{class@affiliations}{\class@affiliations}%
+  \kvsetkeys@expandafter{class@affiliations}{\class@affiliations}%
   \endgroup
 }
 
@@ -1108,29 +1105,29 @@
     beforeskip   = 8bp,
     afterskip    = 8bp,
     afterindent  = true,
-  },
+   },
   %
   % 二级标题：5 号黑体，段前 0.25 行，段后 0.25 行。
   subsection = {
-    format       = \zihao{5},
-    nameformat   = \heiti,
-    numberformat = \bfseries,
-    titleformat  = \heiti,
-    beforeskip   = 2.625bp,
-    afterskip    = 2.625bp,
-    afterindent  = true,
-  },
+      format       = \zihao{5},
+      nameformat   = \heiti,
+      numberformat = \bfseries,
+      titleformat  = \heiti,
+      beforeskip   = 2.625bp,
+      afterskip    = 2.625bp,
+      afterindent  = true,
+    },
   %
   % 三级节标题：5 号宋体，段前段后 0 磅。
   subsubsection = {
-    format       = \zihao{5},
-    beforeskip   = \z@,
-    afterskip    = \z@,
-    afterindent  = true,
-  },
+      format       = \zihao{5},
+      beforeskip   = \z@,
+      afterskip    = \z@,
+      afterindent  = true,
+    },
   appendix = {
-    name = {\appendixname\space},
-  },
+      name = {\appendixname\space},
+    },
 }
 
 
@@ -1141,9 +1138,9 @@
 \def\UrlBreaks{%
   \do\/%
   \do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
-     \do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z%
+  \do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z%
   \do\A\do\B\do\C\do\D\do\E\do\F\do\G\do\H\do\I\do\J\do\K\do\L%
-     \do\M\do\N\do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V\do\W\do\X\do\Y\do\Z%
+  \do\M\do\N\do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V\do\W\do\X\do\Y\do\Z%
   \do0\do1\do2\do3\do4\do5\do6\do7\do8\do9\do=\do/\do.\do:%
   \do\*\do\-\do\~\do\'\do\"\do\-}
 \Urlmuskip=0mu plus 0.1mu
@@ -1245,10 +1242,10 @@
 % \subsubsection{数学定理}
 
 \newtheoremstyle{cjc}
-  {\z@}{\z@}
-  {}{2\ccwd}
-  {\bfseries}{.}
-  {\ccwd}{}
+{\z@}{\z@}
+{}{2\ccwd}
+{\bfseries}{.}
+{\ccwd}{}
 \theoremstyle{cjc}
 % 定义新的定理
 \newcommand\class@assertionname{断言}
@@ -1291,14 +1288,14 @@
 % 参考文献列表格式：宋体 10.5 磅，行距 20 磅，续行缩进两字，左对齐。
 \renewcommand\bibsection{%
   \begingroup
-    \ctexset{
-      section = {
-        format = \centering\fontsize{10.5bp}{16bp}\linespread{1}\selectfont,
-        beforeskip = 16bp,
-        afterskip = 16bp,
-      },
-    }%
-    \section*{\refname}%
+  \ctexset{
+    section = {
+      format = \centering\fontsize{10.5bp}{16bp}\linespread{1}\selectfont,
+      beforeskip = 16bp,
+      afterskip = 16bp,
+     },
+  }%
+  \section*{\refname}%
   \endgroup
 }
 \renewcommand\bibfont{\fontsize{7.5bp}{14bp}\linespread{1}\selectfont}
@@ -1319,7 +1316,7 @@
       format     = \zihao{5},
       beforeskip = \z@,
       afterskip  = \z@,
-    },
+     },
   }%
   \zihao{-5}%
 }
@@ -1332,9 +1329,9 @@
     \class@@biography@alt\par
   }%
   \begingroup
-    \zihao{-5}%
-    \par\null\par
-    \kvsetkeys@expandafter{class@authors}{\class@authors}
+  \zihao{-5}%
+  \par\null\par
+  \kvsetkeys@expandafter{class@authors}{\class@authors}
   \endgroup
 }
 
